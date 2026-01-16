@@ -1,0 +1,17 @@
+<h2>Product List</h2>
+<table border="1">
+  <tr>
+    <th>PID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Brand</th>
+    </tr>
+    <tr *ngFor="let p of products">
+      <td>{{p.pid}}</td>
+      <td>{{p.pname}}</td>
+      <td>{{p.price}}</td>
+      <td>{{p.brand}}</td>
+    </tr>
+</table>
+<br>
+<a routerLink="/add">Add product</a>
