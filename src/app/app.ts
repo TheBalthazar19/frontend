@@ -1,12 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet,RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [RouterOutlet,CommonModule,RouterLink],
+  template: `
+  <h2 style="text-align:center">Product Admin</h2>
+  <nav style="text-align: center;margin-bottom: 20px;">
+  <a routerLink="/add">Add Product</a>
+  <a routerLink="/display">Display Product</a>
+  </nav>
+  <router-outlet></router-outlet>
+  `
 })
-export class App {
-  protected readonly title = signal('frontend');
-}
+export class App {}
