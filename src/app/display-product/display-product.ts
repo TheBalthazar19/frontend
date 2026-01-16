@@ -12,7 +12,7 @@ export class DisplayProduct implements OnInit {
 products:any[]=[];
 constructor(private ps:Product){}
 ngOnInit(){
-this.ps.getProduct().subscribe(res => {
+this.ps.getProducts().subscribe(res => {
   this.products=res;
 });
 }

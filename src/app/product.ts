@@ -10,7 +10,7 @@ export class Product {
   addProduct(p:any){
     return this.http.post(`${this.url}/addproduct`,p);
   }
-  getProduct(){
-    return this.http.get(`${this.url}/getallproducts`);
+  getProducts(){
+    return this.http.get<any[]>(`${this.url}/getallproducts`);
   }
 }
