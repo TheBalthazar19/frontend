@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   imports: [CommonModule],
+  standalone: true,
   selector: 'app-display-product',
   templateUrl: './display-product.html',
 })
