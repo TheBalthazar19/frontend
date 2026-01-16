@@ -1,10 +1,13 @@
-<h2>Add Product</h2>
+<h3>Add Product</h3>
 <form #f="ngForm">
-<input type="number" name="pid" [(ngModel)]="product.pid" placeholder="PID" required><br><br>
-<input type="text" name="pname" [(ngModel)]="product.pname" placeholder="Name" required><br><br>
-<input type="number" name="price" [(ngModel)]="product.price" placeholder="Price" required><br><br>
-<input type="text" name="brand" [(ngModel)]="product.brand" placeholder="Brand" required><br><br>
-<button [disabled]="f.invalid" (click)="submit()">Add Product</button>
+    <label>PID:</label><br />
+<input  name="pid" [(ngModel)]="product.pid"  required><br /><br />
+    <label>Name:</label><br />
+<input name="pname" [(ngModel)]="product.pname" required><br /><br />
+    <label>Price:</label><br />
+<input name="price" [(ngModel)]="product.price" required><br /><br />
+    <label>Brand:</label><br />
+<input name="brand" [(ngModel)]="product.brand" required><br><br>
+<button  (click)="add()" [disabled]="!f.valid">Add Product</button>
 </form>
-<br>
-<a routerLink="/display">Display product</a>
+

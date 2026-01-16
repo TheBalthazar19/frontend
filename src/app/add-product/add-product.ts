@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class AddProduct {
 product={pid:'',pname:'',price:'',brand:''};
 constructor(private ps:Product){}
-submit(){
+add(){
   this.ps.addProduct(this.product).subscribe(()=>{
     alert('Product added successfully');
     this.product={pid:'',pname:'',price:'',brand:''};
