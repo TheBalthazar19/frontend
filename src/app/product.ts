@@ -11,6 +11,6 @@ export class Product {
     return this.http.post(`${this.url}/addproduct`,p);
   }
   getProducts(){
-    return this.http.get<any[]>(`${this.url}/getallproducts`);
+    return this.http.get<any[]>("http://localhost:7000/getallproducts");
   }
 }
